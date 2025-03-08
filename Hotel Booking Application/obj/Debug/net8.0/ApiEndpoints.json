@@ -1,0 +1,210 @@
+[
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "User/AddUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUserDTO",
+        "Type": "Hotel_Booking_Application.DTOs.UserDTOs.CreateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.UserDTOs.CreateUserResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "AssignRole",
+    "RelativePath": "User/AssignRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userRoleDTO",
+        "Type": "Hotel_Booking_Application.DTOs.UserDTOs.UserRoleDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.UserDTOs.UserRoleResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "User/DeleteUser/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.UserDTOs.DeleteUserResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "User/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[System.Collections.Generic.List\u00601[[Hotel_Booking_Application.DTOs.UserDTOs.UserResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "User/GetUserById/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.UserDTOs.UserResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUserDTO",
+        "Type": "Hotel_Booking_Application.DTOs.UserDTOs.LoginUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.UserDTOs.LoginUserResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "ToggleActive",
+    "RelativePath": "User/ToggleActive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "isActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "User/UpdateUser/{userId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateUserDTO",
+        "Type": "Hotel_Booking_Application.DTOs.UserDTOs.UpdateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.UserDTOs.UpdateUserResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

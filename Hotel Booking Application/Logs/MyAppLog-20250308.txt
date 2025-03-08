@@ -1,0 +1,25 @@
+2025-03-08 05:14:46.087 +02:00 [INF] Recieved Request to Add user : {"Email":"user@example.com","Password":"123456789","$type":"CreateUserDTO"}
+2025-03-08 05:14:47.103 +02:00 [ERR] Error in Adding the user with Email : user@example.com
+2025-03-08 05:17:23.545 +02:00 [INF] Recieved Request to Add user : {"Email":"user@example.com","Password":"123456","$type":"CreateUserDTO"}
+2025-03-08 05:17:23.968 +02:00 [INF] CreateUser Response From UserRepository : {"UserId":1,"Message":"User Created Successfully","IsCreated":true,"$type":"CreateUserResponseDTO"}
+2025-03-08 05:18:04.438 +02:00 [INF] Request Received for GetAllUsers, IsActive: True
+2025-03-08 05:18:04.450 +02:00 [ERR] Error in getting all users
+Microsoft.Data.SqlClient.SqlException (0x80131904): @IsActive is not a parameter for procedure ListAllUsers.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteReaderAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteReaderAsync>b__201_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Hotel_Booking_Application.Repositories.UserRepository.ListAllUsersAsync(Nullable`1 isActive) in E:\MY_Projects\ASP.NET Core Web API  Projects\Hotel Booking Application\Hotel Booking Application\Repositories\UserRepository.cs:line 106
+   at Hotel_Booking_Application.Controllers.UserController.GetAllUsers(Nullable`1 isActive) in E:\MY_Projects\ASP.NET Core Web API  Projects\Hotel Booking Application\Hotel Booking Application\Controllers\UserController.cs:line 93
+ClientConnectionId:bef67336-de9c-4fb5-bdff-93cfee46dc05
+Error Number:8145,State:1,Class:16
