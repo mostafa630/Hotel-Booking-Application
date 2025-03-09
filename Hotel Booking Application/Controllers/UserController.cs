@@ -1,10 +1,7 @@
-﻿using Azure;
-using Hotel_Booking_Application.DTOs.UserDTOs;
+﻿using Hotel_Booking_Application.DTOs.UserDTOs;
 using Hotel_Booking_Application.Models;
 using Hotel_Booking_Application.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using System.ComponentModel.Design.Serialization;
 using System.Net;
 
 namespace Hotel_Booking_Application.Controllers

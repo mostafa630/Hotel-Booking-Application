@@ -5,6 +5,260 @@
     "version": "1.0"
   },
   "paths": {
+    "/RoomType/GetAllRoomTypes": {
+      "get": {
+        "tags": [
+          "RoomType"
+        ],
+        "parameters": [
+          {
+            "name": "IsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomTypeResponseDTOListAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomTypeResponseDTOListAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomTypeResponseDTOListAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RoomType/GetRoomType/{RoomTypeID}": {
+      "get": {
+        "tags": [
+          "RoomType"
+        ],
+        "parameters": [
+          {
+            "name": "RoomTypeID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomTypeResponseDTOAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RoomType/AddRoomType": {
+      "post": {
+        "tags": [
+          "RoomType"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoomTypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoomTypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoomTypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRoomTypeResponseDTOAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RoomType/UpdateRoomType/{RoomTypeId}": {
+      "put": {
+        "tags": [
+          "RoomType"
+        ],
+        "parameters": [
+          {
+            "name": "RoomTypeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoomTypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoomTypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoomTypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateRoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateRoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateRoomTypeResponseDTOAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RoomType/DeleteRoomType/{RoomTypeId}": {
+      "delete": {
+        "tags": [
+          "RoomType"
+        ],
+        "parameters": [
+          {
+            "name": "RoomTypeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteRoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteRoomTypeResponseDTOAPIResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteRoomTypeResponseDTOAPIResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RoomType/ActiveInActive": {
+      "post": {
+        "tags": [
+          "RoomType"
+        ],
+        "parameters": [
+          {
+            "name": "RoomTypeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/User/AddUser": {
       "post": {
         "tags": [
@@ -358,6 +612,67 @@
   },
   "components": {
     "schemas": {
+      "CreateRoomTypeDTO": {
+        "required": [
+          "description",
+          "typeName"
+        ],
+        "type": "object",
+        "properties": {
+          "typeName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "accessibilityFeatures": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRoomTypeResponseDTO": {
+        "type": "object",
+        "properties": {
+          "roomTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCreated": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRoomTypeResponseDTOAPIResponse": {
+        "type": "object",
+        "properties": {
+          "sucess": {
+            "type": "boolean"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CreateRoomTypeResponseDTO"
+          },
+          "error": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateUserDTO": {
         "required": [
           "email",
@@ -409,6 +724,41 @@
           },
           "data": {
             "$ref": "#/components/schemas/CreateUserResponseDTO"
+          },
+          "error": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteRoomTypeResponseDTO": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteRoomTypeResponseDTOAPIResponse": {
+        "type": "object",
+        "properties": {
+          "sucess": {
+            "type": "boolean"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/DeleteRoomTypeResponseDTO"
           },
           "error": {
             "nullable": true
@@ -569,6 +919,145 @@
           },
           "data": {
             "$ref": "#/components/schemas/LoginUserResponseDTO"
+          },
+          "error": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoomTypeResponseDTO": {
+        "type": "object",
+        "properties": {
+          "roomTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "typeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "accessibilityFeatures": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoomTypeResponseDTOAPIResponse": {
+        "type": "object",
+        "properties": {
+          "sucess": {
+            "type": "boolean"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/RoomTypeResponseDTO"
+          },
+          "error": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoomTypeResponseDTOListAPIResponse": {
+        "type": "object",
+        "properties": {
+          "sucess": {
+            "type": "boolean"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoomTypeResponseDTO"
+            },
+            "nullable": true
+          },
+          "error": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRoomTypeDTO": {
+        "required": [
+          "description",
+          "roomTypeID",
+          "typeName"
+        ],
+        "type": "object",
+        "properties": {
+          "roomTypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "typeName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "accessibilityFeatures": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRoomTypeResponseDTO": {
+        "type": "object",
+        "properties": {
+          "roomTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "isUpdated": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRoomTypeResponseDTOAPIResponse": {
+        "type": "object",
+        "properties": {
+          "sucess": {
+            "type": "boolean"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UpdateRoomTypeResponseDTO"
           },
           "error": {
             "nullable": true

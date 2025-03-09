@@ -1,0 +1,2 @@
+2025-03-09 17:00:09.144 +02:00 [INF] Request Received for CreateRoomType: {"TypeName":"VIP","AccessibilityFeatures":"ALL is Availabel","Description":"fpr VIP mens","$type":"CreateRoomTypeDTO"}
+2025-03-09 17:00:11.766 +02:00 [INF] CreateRoomType Response From Repository: {"RoomTypeId":5,"Message":"New Room type Created","IsCreated":true,"$type":"CreateRoomTypeResponseDTO"}

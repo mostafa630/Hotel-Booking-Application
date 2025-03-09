@@ -23,3 +23,17 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): @IsActive is not a parameter
    at Hotel_Booking_Application.Controllers.UserController.GetAllUsers(Nullable`1 isActive) in E:\MY_Projects\ASP.NET Core Web API  Projects\Hotel Booking Application\Hotel Booking Application\Controllers\UserController.cs:line 93
 ClientConnectionId:bef67336-de9c-4fb5-bdff-93cfee46dc05
 Error Number:8145,State:1,Class:16
+2025-03-08 05:23:05.772 +02:00 [INF] Request Received for GetAllUsers, IsActive: 
+2025-03-08 05:23:14.234 +02:00 [INF] Request Received for GetAllUsers, IsActive: True
+2025-03-08 05:23:21.066 +02:00 [INF] Request Received for GetAllUsers, IsActive: False
+2025-03-08 05:23:38.676 +02:00 [INF] Request Received for GetUserById, UserID: 1
+2025-03-08 05:24:05.871 +02:00 [INF] Request Received for LoginUser {"Email":"user@example.com","Password":"123456","$type":"LoginUserDTO"}
+2025-03-08 05:24:39.238 +02:00 [INF] Request Received for GetAllUsers, IsActive: False
+2025-03-08 05:25:10.144 +02:00 [INF] Request Received for DeleteUser, Id: 1
+2025-03-08 05:25:30.034 +02:00 [INF] Request Received for GetUserById, UserID: 1
+2025-03-08 05:25:35.673 +02:00 [INF] Request Received for GetUserById, UserID: 1
+2025-03-08 05:25:57.440 +02:00 [INF] Request Received for GetUserById, UserID: 1
+2025-03-08 05:26:25.080 +02:00 [INF] Request Received for GetUserById, UserID: 1
+2025-03-08 05:26:35.051 +02:00 [INF] Request Received for DeleteUser, Id: 1
+2025-03-08 05:26:40.300 +02:00 [INF] Request Received for GetUserById, UserID: 1
+2025-03-08 05:26:52.291 +02:00 [INF] Request Received for GetUserById, UserID: 1

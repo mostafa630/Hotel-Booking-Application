@@ -22,6 +22,7 @@ namespace Hotel_Booking_Application
             builder.Services.AddSingleton<SqlConnectionFactory>();
             //register the repositories so I can use it any where to access the database.
             builder.Services.AddScoped<UserRepository>();
+            builder.Services.AddScoped<RoomTypeRepository>();
 
             // Initialize Serilog 
             builder.Host.UseSerilog((context, services, configuration) => configuration
