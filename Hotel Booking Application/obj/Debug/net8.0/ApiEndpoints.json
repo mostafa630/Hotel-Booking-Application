@@ -1,5 +1,145 @@
 [
   {
+    "ContainingType": "Hotel_Booking_Application.Controllers.RoomController",
+    "Method": "CreateRoom",
+    "RelativePath": "Room/CreateRoom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Hotel_Booking_Application.DTOs.RoomDTOs.CreateRoomDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.CreateRoomResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.RoomController",
+    "Method": "DeleteRoom",
+    "RelativePath": "Room/DeleteRoom/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.DeleteRoomResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.RoomController",
+    "Method": "GetAllRooms",
+    "RelativePath": "Room/GetAllRooms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RoomTypeID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[System.Collections.Generic.List\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomDetailsResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.RoomController",
+    "Method": "GetRoomById",
+    "RelativePath": "Room/GetRoomById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomDetailsResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.RoomController",
+    "Method": "UpdateRoom",
+    "RelativePath": "Room/UpdatRoom/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Hotel_Booking_Application.DTOs.RoomDTOs.UpdateRoomDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.UpdateRoomResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Hotel_Booking_Application.Controllers.RoomTypeController",
     "Method": "ToggleActive",
     "RelativePath": "RoomType/ActiveInActive",
@@ -30,13 +170,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Hotel_Booking_Application.DTOs.RoomDTOs.CreateRoomTypeDTO",
+        "Type": "Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs.CreateRoomTypeDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.CreateRoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs.CreateRoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -62,7 +202,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.DeleteRoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs.DeleteRoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -88,7 +228,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[System.Collections.Generic.List\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[System.Collections.Generic.List\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs.RoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -114,7 +254,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs.RoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -139,13 +279,13 @@
       },
       {
         "Name": "request",
-        "Type": "Hotel_Booking_Application.DTOs.RoomDTOs.UpdateRoomTypeDTO",
+        "Type": "Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs.UpdateRoomTypeDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.UpdateRoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs.UpdateRoomTypeResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

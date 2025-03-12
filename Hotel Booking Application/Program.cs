@@ -23,6 +23,7 @@ namespace Hotel_Booking_Application
             //register the repositories so I can use it any where to access the database.
             builder.Services.AddScoped<UserRepository>();
             builder.Services.AddScoped<RoomTypeRepository>();
+            builder.Services.AddScoped<RoomRepository>();
 
             // Initialize Serilog 
             builder.Host.UseSerilog((context, services, configuration) => configuration

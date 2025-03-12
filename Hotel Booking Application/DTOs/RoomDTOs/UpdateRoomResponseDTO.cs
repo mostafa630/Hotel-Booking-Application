@@ -1,8 +1,8 @@
 ﻿namespace Hotel_Booking_Application.DTOs.RoomDTOs
 {
-    public class UpdateRoomTypeResponseDTO
+    public class UpdateRoomResponseDTO
     {
-        public int RoomTypeId { get; set; }
+        public int RoomId { get; set; }
         public string Message { get; set; }
         public bool IsUpdated { get; set; }
     }

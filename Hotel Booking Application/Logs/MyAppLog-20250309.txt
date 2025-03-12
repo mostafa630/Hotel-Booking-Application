@@ -1,2 +1,10 @@
 2025-03-09 17:00:09.144 +02:00 [INF] Request Received for CreateRoomType: {"TypeName":"VIP","AccessibilityFeatures":"ALL is Availabel","Description":"fpr VIP mens","$type":"CreateRoomTypeDTO"}
 2025-03-09 17:00:11.766 +02:00 [INF] CreateRoomType Response From Repository: {"RoomTypeId":5,"Message":"New Room type Created","IsCreated":true,"$type":"CreateRoomTypeResponseDTO"}
+2025-03-09 17:00:39.636 +02:00 [INF] Request Received for GetRoomTypeById, RoomTypeID: 5
+2025-03-09 17:00:53.297 +02:00 [INF] Request Received for GetAllRoomTypes, IsActive: True
+2025-03-09 17:01:39.479 +02:00 [INF] Request Received for UpdateRoomType {"RoomTypeID":5,"TypeName":"NO VIP","AccessibilityFeatures":"NONE","Description":"NONE","$type":"UpdateRoomTypeDTO"}
+2025-03-09 17:01:49.950 +02:00 [INF] Request Received for GetRoomTypeById, RoomTypeID: 5
+2025-03-09 17:02:12.165 +02:00 [INF] Request Received for GetAllRoomTypes, IsActive: True
+2025-03-09 17:02:30.672 +02:00 [INF] Request Received for GetAllRoomTypes, IsActive: True
+2025-03-09 17:02:44.551 +02:00 [INF] Request Received for DeleteRoomType, RoomTypeId: 5
+2025-03-09 17:02:51.686 +02:00 [INF] Request Received for GetAllRoomTypes, IsActive: True

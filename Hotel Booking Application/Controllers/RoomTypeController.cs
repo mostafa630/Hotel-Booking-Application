@@ -1,4 +1,4 @@
-﻿using Hotel_Booking_Application.DTOs.RoomDTOs;
+﻿using Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs;
 using Hotel_Booking_Application.Models;
 using Hotel_Booking_Application.Repositories;
 using Microsoft.AspNetCore.Mvc;

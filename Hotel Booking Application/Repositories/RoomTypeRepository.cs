@@ -1,5 +1,5 @@
 ﻿using Hotel_Booking_Application.Connection;
-using Hotel_Booking_Application.DTOs.RoomDTOs;
+using Hotel_Booking_Application.DTOs.RoomDTOs.RoomTypeDTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Data.SqlClient;
 using System.Data;
