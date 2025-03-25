@@ -10,7 +10,7 @@ namespace Hotel_Booking_Application
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -24,6 +24,7 @@ namespace Hotel_Booking_Application
             builder.Services.AddScoped<UserRepository>();
             builder.Services.AddScoped<RoomTypeRepository>();
             builder.Services.AddScoped<RoomRepository>();
+            builder.Services.AddScoped<AmenityRepository>();
 
             // Initialize Serilog 
             builder.Host.UseSerilog((context, services, configuration) => configuration

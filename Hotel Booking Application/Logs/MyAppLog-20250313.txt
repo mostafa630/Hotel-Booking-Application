@@ -14,3 +14,15 @@ System.InvalidOperationException: Unable to resolve service for type 'Hotel_Book
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-13 00:33:53.874 +02:00 [INF] Request Received for CreateRoomType: {"RoomTypeID":1,"Status":null,"$type":"GetAllRoomsDTO"}
+2025-03-13 00:34:08.402 +02:00 [INF] Request Received for GetRoomById, id: 1
+2025-03-13 00:35:12.081 +02:00 [INF] Request Received for CreateRoom: {"RoomNumber":"3","RoomTypeID":1,"Price":2530,"BedType":"abane","ViewType":"sea","Status":"Occupied","IsActive":true,"$type":"CreateRoomDTO"}
+2025-03-13 00:35:12.102 +02:00 [INF] CreateRoom Response From Repository: {"RoomID":6,"Message":"Room created successfully.","IsCreated":true,"$type":"CreateRoomResponseDTO"}
+2025-03-13 00:35:24.296 +02:00 [INF] Request Received for CreateRoomType: {"RoomTypeID":1,"Status":null,"$type":"GetAllRoomsDTO"}
+2025-03-13 00:35:56.456 +02:00 [INF] Request Received for UpdateRoom {"RoomID":6,"RoomNumber":"string","RoomTypeID":2147483647,"Price":999999.99,"BedType":"string","ViewType":"string","Status":"Available","IsActive":true,"$type":"UpdateRoomDTO"}
+2025-03-13 00:36:38.777 +02:00 [INF] Request Received for UpdateRoom {"RoomID":8,"RoomNumber":"3","RoomTypeID":2147483647,"Price":999999.99,"BedType":"string","ViewType":"string","Status":"Occupied","IsActive":true,"$type":"UpdateRoomDTO"}
+2025-03-13 00:36:38.777 +02:00 [INF] UpdateRoom Mismatched Room ID
+2025-03-13 00:36:46.986 +02:00 [INF] Request Received for UpdateRoom {"RoomID":6,"RoomNumber":"3","RoomTypeID":2147483647,"Price":999999.99,"BedType":"string","ViewType":"string","Status":"Occupied","IsActive":true,"$type":"UpdateRoomDTO"}
+2025-03-13 00:36:58.871 +02:00 [INF] Request Received for UpdateRoom {"RoomID":6,"RoomNumber":"3","RoomTypeID":1,"Price":999999.99,"BedType":"string","ViewType":"string","Status":"Occupied","IsActive":true,"$type":"UpdateRoomDTO"}
+2025-03-13 00:37:09.910 +02:00 [INF] Request Received for DeleteRoom, id: 6
+2025-03-13 00:37:18.786 +02:00 [INF] Request Received for CreateRoomType: {"RoomTypeID":1,"Status":null,"$type":"GetAllRoomsDTO"}

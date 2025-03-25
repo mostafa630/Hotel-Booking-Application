@@ -1,5 +1,218 @@
 [
   {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "AddAmenity",
+    "RelativePath": "api/Amenity/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amenity",
+        "Type": "Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityInsertDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityInsertResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "BulkInsertAmenities",
+    "RelativePath": "api/Amenity/BulkInsert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amenities",
+        "Type": "System.Collections.Generic.List\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityInsertDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityBulkOperationResultDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "BulkUpdateAmenities",
+    "RelativePath": "api/Amenity/BulkUpdate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amenities",
+        "Type": "System.Collections.Generic.List\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityUpdateDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityBulkOperationResultDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "BulkUpdateAmenityStatus",
+    "RelativePath": "api/Amenity/BulkUpdateStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amenityStatuses",
+        "Type": "System.Collections.Generic.List\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityStatusDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityBulkOperationResultDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "DeleteAmenity",
+    "RelativePath": "api/Amenity/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityDeleteResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "FetchAmenities",
+    "RelativePath": "api/Amenity/Fetch",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityFetchResultDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "FetchAmenityById",
+    "RelativePath": "api/Amenity/Fetch/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityDetailsDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hotel_Booking_Application.Controllers.AmenityController",
+    "Method": "UpdateAmenity",
+    "RelativePath": "api/Amenity/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "amenity",
+        "Type": "Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hotel_Booking_Application.Models.APIResponse\u00601[[Hotel_Booking_Application.DTOs.AmenityDTOs.AmenityUpdateResponseDTO, Hotel Booking Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Hotel_Booking_Application.Controllers.RoomController",
     "Method": "CreateRoom",
     "RelativePath": "Room/CreateRoom",
